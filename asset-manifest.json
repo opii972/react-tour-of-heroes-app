@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-tour-of-heroes-app/static/css/main.f0c48fb3.chunk.css",
+    "main.js": "/react-tour-of-heroes-app/static/js/main.d8f638dc.chunk.js",
+    "main.js.map": "/react-tour-of-heroes-app/static/js/main.d8f638dc.chunk.js.map",
+    "runtime-main.js": "/react-tour-of-heroes-app/static/js/runtime-main.63006abb.js",
+    "runtime-main.js.map": "/react-tour-of-heroes-app/static/js/runtime-main.63006abb.js.map",
+    "static/js/2.8701dcec.chunk.js": "/react-tour-of-heroes-app/static/js/2.8701dcec.chunk.js",
+    "static/js/2.8701dcec.chunk.js.map": "/react-tour-of-heroes-app/static/js/2.8701dcec.chunk.js.map",
+    "static/js/3.4eef3780.chunk.js": "/react-tour-of-heroes-app/static/js/3.4eef3780.chunk.js",
+    "static/js/3.4eef3780.chunk.js.map": "/react-tour-of-heroes-app/static/js/3.4eef3780.chunk.js.map",
+    "index.html": "/react-tour-of-heroes-app/index.html",
+    "static/css/main.f0c48fb3.chunk.css.map": "/react-tour-of-heroes-app/static/css/main.f0c48fb3.chunk.css.map",
+    "static/js/2.8701dcec.chunk.js.LICENSE.txt": "/react-tour-of-heroes-app/static/js/2.8701dcec.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.63006abb.js",
+    "static/js/2.8701dcec.chunk.js",
+    "static/css/main.f0c48fb3.chunk.css",
+    "static/js/main.d8f638dc.chunk.js"
+  ]
+}
