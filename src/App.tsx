@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Link, Route, Switch } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Dashboard from './Dashboard/Dashboard';
+import Heroes from './Heroes/Heroes';
+import HeroDetail from './HeroDetail/HeroDetail';
+
+import './App.scoped.css';
+import Messages from './Messages/Messages';
+
+const App = () => (
+  <div className="app">
+    <h1>Tour of Heroes</h1>
+    <nav>
+      <Link to={'/dashboard'}>Dashboard</Link>
+      <Link to={'/heroes'}>Heroes</Link>
+    </nav>
+    <Switch>
+      <Route exact path="/">
+        <Dashboard />
+      </Route>
+      <Route path="/dashboard">
+        <Dashboard />
+      </Route>
+      <Route path="/heroes">
+        <Heroes />
+      </Route>
+      <Route path="/detail/:id">
+        <HeroDetail />
+      </Route>
+    </Switch>
+    <Messages />
+  </div>
+);
 
 export default App;
