@@ -6,8 +6,8 @@ To see the original version: [live example](https://angular.io/generated/live-ex
 [download example](https://angular.io/generated/zips/toh-pt6/toh-pt6.zip).
 
 Please note, this project is not a comparison between these two technologies but 
-only **my vision** of the excellent Angular's Tour of Heroes tutorial project 
-written with React. \
+only a simple adaptation of the excellent Angular's Tour of Heroes tutorial project 
+writes with React. \
 This project is for Front-End developers who learned Angular first and are curious 
 about developing Web Applications using React.
 
@@ -22,8 +22,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
-
-Please note, in my demo application, you can't add more than 15 heroes and log messages are limited to 15.
 
 ### `npm test`
 

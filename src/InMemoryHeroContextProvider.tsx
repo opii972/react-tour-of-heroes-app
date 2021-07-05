@@ -1,6 +1,6 @@
 import React, { ReactElement, useContext, useState } from 'react';
 import { from, Observable, of } from 'rxjs';
-import { catchError, filter, map, tap } from 'rxjs/operators';
+import { filter, map, tap } from 'rxjs/operators';
 
 import { Hero } from './hero';
 import { MessageContext } from './MessageContextProvider';
@@ -66,12 +66,6 @@ const InMemoryHeroContextProvider = ({ children }: HeroContextProviderProps) => 
 
       return of(newHero)
         .pipe(
-          tap(() => {
-            if (heroes.length >= 15) {
-              throw new Error('Limit reached');
-            }
-          }),
-          catchError(handleError<Hero>('addHero limit reached')),
           tap((hero: Hero) => {
             if (hero) {
               setHeroes([...heroes, hero]);
@@ -102,23 +96,6 @@ const InMemoryHeroContextProvider = ({ children }: HeroContextProviderProps) => 
           tap(_ => log(`updated hero id=${hero.id}`)),
         );
     },
-  };
-
-  /**
-   * Handle Http operation that failed.
-   * Let the app continue.
-   * @param operation - name of the operation that failed
-   * @param result - optional value to return as the observable result
-   */
-  const handleError = <T, >(operation = 'operation', result?: T) => (error: any): Observable<T> => {
-    // TODO: send the error to remote logging infrastructure
-    console.error(error); // log to console instead
-
-    // TODO: better job of transforming error for user consumption
-    log(`${operation} failed: ${error.message}`);
-
-    // Let the app keep running by returning an empty result.
-    return of(result as T);
   };
 
   /** Log a HeroService message with the MessageService */
