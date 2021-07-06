@@ -16,6 +16,8 @@ describe('Dashboard', () => {
         <Dashboard />
       </HeroContext.Provider>);
     // THEN
+    expect(screen.getByRole('heading', { level: 2, name: /Top Heroes/i })).toBeInTheDocument();
+    expect(screen.queryAllByRole('link')).toHaveLength(0);
     expect(screen.getByRole('textbox', { name: /Hero Search/i })).toBeInTheDocument();
   });
 
